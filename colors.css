@@ -1,0 +1,22 @@
+:root{
+  --max-w:1100px;
+  --accent:#6d28d9; /* primary accent (purple) */
+  --muted:#6b7280;
+  --bg:#0f172a;
+  --card:#0b1220;
+  --glass: rgba(255,255,255,0.03);
+  --radius:12px;
+  --gap:20px;
+  color-scheme: dark;
+}
+
+/* Light theme example: copy these into styles.css or include with <link rel="stylesheet" href="colors.css"> and add class "light" to <body> */
+body.light {
+  background: #ffffff;
+  color: #0b1220;
+  color-scheme: light;
+}
+body.light .logo{color:#1f2937}
+body.light .card{background:#ffffff;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+body.light .img{background:linear-gradient(90deg,#eef2ff,#f8fafc);color:#0b1220}
+body.light .btn.primary{background:#0b1220;color:white}

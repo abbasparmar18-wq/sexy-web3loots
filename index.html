@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sexy.web3loots — Welcome</title>
+  <meta name="description" content="Sexy.web3loots — Modern, sleek & responsive landing page." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.png" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="#">Sexy.web3loots</a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="cta" id="openMenu">Menu</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Sexy.web3loots</h1>
+          <p class="lead">Modern web3 experiences — sleek design, fast performance, and easy integration.</p>
+          <p class="sub">Ready-made landing, NFT / token drops, wallet connect demos & integrations.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#contact">Get Started</a>
+            <a class="btn ghost" href="#features">Learn More</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="card">
+            <h3>Live demo</h3>
+            <p>Placeholder for quick demo or wallet connect widget area.</p>
+            <div class="meta">Version 1.0</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section about">
+      <div class="container">
+        <h2>हम क्या करते हैं</h2>
+        <p>Sexy.web3loots एक सरल, तेज़ और आकर्षक वेब प्रॉपर्टी के लिए landing page template है — आसानी से web3 (wallet, NFT) फीचर्स जोड़ने के लिए तैयार।</p>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="section features">
+      <div class="container">
+        <h2>मुख्य फीचर्स</h2>
+        <div class="features-grid">
+          <div class="feature">
+            <h3>Responsive Design</h3>
+            <p>Mobile-first और सभी स्क्रीन पर अच्छा दिखता है।</p>
+          </div>
+          <div class="feature">
+            <h3>Easy Integration</h3>
+            <p>Wallet connect, token drop और API के लिए hook points।</p>
+          </div>
+          <div class="feature">
+            <h3>Fast & Lightweight</h3>
+            <p>कम assets और तेज़ लोडिंग के साथ optimized.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="section gallery">
+      <div class="container">
+        <h2>Gallery / Screenshots</h2>
+        <div class="gallery-grid">
+          <div class="img">Image 1</div>
+          <div class="img">Image 2</div>
+          <div class="img">Image 3</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>नीचे फॉर्म भरें — मैं सीधे ईमेल पर नोटिफिकेशन भेजने का example दिया है (Formspree)।</p>
+
+        <!-- Replace FORM_ACTION with your Formspree endpoint -->
+        <form id="contactForm" action="https://formspree.io/f/yourFormId" method="POST">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="आपका नाम" required />
+            <input type="email" name="email" placeholder="आपका ईमेल" required />
+          </div>
+          <div class="form-row">
+            <input type="text" name="subject" placeholder="Subject" />
+          </div>
+          <div class="form-row">
+            <textarea name="message" rows="5" placeholder="संदेश यहाँ लिखें..." required></textarea>
+          </div>
+          <div class="form-row">
+            <button type="submit" class="btn primary">Send Message</button>
+          </div>
+        </form>
+
+        <p class="small">या सीधे ईमेल: <a href="mailto:hello@web3loots.com">hello@web3loots.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Sexy.web3loots — All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
