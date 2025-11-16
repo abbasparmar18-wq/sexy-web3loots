@@ -1,25 +1,18 @@
 /* Mobile-first pink landing (SexyChat-like) */
 :root{
   --bg1: #ff6b9f;
-  --bg2: #ff8fb8;
-  --card: rgba(255,255,255,0.12);
-  --muted: rgba(255,255,255,0.85);
-  --glass: rgba(255,255,255,0.12);
-  --radius: 14px;
-  --gap: 14px;
-  --accent: #ffffff;
+  --bg2: #ff4d94;
+  --accent: #fff;
+  --muted: rgba(255,255,255,0.9);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
-
 *{box-sizing:border-box}
 html,body{height:100%;margin:0}
 body{
   background: linear-gradient(180deg,var(--bg1),var(--bg2));
   color:var(--accent);
   -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
 }
-
 .hero{
   min-height:100vh;
   display:flex;
@@ -28,109 +21,21 @@ body{
   padding:28px 20px 40px;
   gap:18px;
 }
-
-/* top avatar */
 .avatar{
-  width:86px;
-  height:86px;
-  border-radius:50%;
-  background:white;
-  padding:6px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.12);
+  width:96px;height:96px;border-radius:50%;background:rgba(255,255,255,0.1);padding:6px;box-shadow:0 10px 30px rgba(0,0,0,0.12);
   object-fit:cover;
 }
-
-/* brand */
 .brand{ text-align:center; margin-top:4px }
-.brand h1{
-  font-size:34px;
-  margin:8px 0 6px;
-  letter-spacing:0.4px;
-  font-weight:800;
-  color:#fff;
-}
-.brand .peach{ margin-left:6px; transform:translateY(2px); }
-.tag{
-  opacity:0.95;
-  font-size:14px;
-  margin:0;
-  color: rgba(255,255,255,0.95);
-}
-
-/* cta buttons */
-.cta-row{
-  display:flex;
-  gap:12px;
-  width:100%;
-  max-width:420px;
-  justify-content:center;
-  margin-top:8px;
-}
-.btn{
-  padding:12px 16px;
-  border-radius:12px;
-  text-decoration:none;
-  display:inline-block;
-  font-weight:700;
-  font-size:15px;
-  border: none;
-}
-.btn.primary{
-  background:#ffffff;
-  color:#ff4d94;
-  box-shadow:0 8px 20px rgba(0,0,0,0.12);
-  min-width:160px;
-  text-align:center;
-}
-.btn.ghost{
-  background: rgba(255,255,255,0.12);
-  color:#fff;
-  min-width:120px;
-  text-align:center;
-}
-
-/* features list */
-.features{
-  margin-top:18px;
-  width:100%;
-  max-width:420px;
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
-.feature{
-  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
-  padding:16px 14px;
-  border-radius:12px;
-  font-weight:700;
-  font-size:15px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
-
-/* floating chat bubble */
-.chat-bubble{
-  margin-top:auto;
-  background:#fff;
-  color:#ff386b;
-  padding:12px 16px;
-  border-radius:18px;
-  font-weight:700;
-  box-shadow:0 8px 30px rgba(0,0,0,0.12);
-  transform: translateY(10px);
-}
-
-/* footer */
-.footer{
-  width:100%;
-  max-width:420px;
-  text-align:center;
-  font-size:12px;
-  color:rgba(255,255,255,0.85);
-  margin-top:10px;
-  padding-bottom:6px;
-}
-
-/* responsive desktop adjustments */
+.brand h1{ font-size:36px;margin:8px 0 6px;font-weight:800; }
+.tag{opacity:0.95;font-size:14px;margin:0;color:var(--muted)}
+.cta-row{display:flex;gap:12px;width:100%;max-width:420px;justify-content:center;margin-top:8px}
+.btn{padding:12px 16px;border-radius:12px;text-decoration:none;display:inline-block;font-weight:700;font-size:15px;border: none;cursor:pointer}
+.btn.primary{background:#fff;color:#ff2d74;min-width:160px;text-align:center;box-shadow:0 8px 20px rgba(0,0,0,0.12)}
+.btn.ghost{background: rgba(255,255,255,0.12);color:#fff;min-width:120px;text-align:center}
+.features{margin-top:18px;width:100%;max-width:420px;display:flex;flex-direction:column;gap:12px}
+.feature{background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));padding:16px 14px;border-radius:12px;font-weight:700;font-size:15px;box-shadow: 0 6px 18px rgba(0,0,0,0.08)}
+.chat-bubble{margin-top:auto;background:#fff;color:#ff386b;padding:12px 16px;border-radius:18px;font-weight:700;box-shadow:0 8px 30px rgba(0,0,0,0.12);transform: translateY(10px)}
+.footer{width:100%;max-width:420px;text-align:center;font-size:12px;color:rgba(255,255,255,0.85);margin-top:10px;padding-bottom:6px}
 @media(min-width:900px){
   .hero{ padding:48px; align-items:flex-start; }
   .brand h1{ font-size:40px; }
