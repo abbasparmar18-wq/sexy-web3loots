@@ -1,43 +1,74 @@
-/* Mobile-first pink landing (SexyChat-like) */
-:root{
-  --bg1: #ff6b9f;
-  --bg2: #ff4d94;
-  --accent: #fff;
-  --muted: rgba(255,255,255,0.9);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0a0014;
+  color: #fff;
 }
-*{box-sizing:border-box}
-html,body{height:100%;margin:0}
-body{
-  background: linear-gradient(180deg,var(--bg1),var(--bg2));
-  color:var(--accent);
-  -webkit-font-smoothing:antialiased;
+
+/* full-screen background */
+.hero {
+  height: 100vh;
+  background: #0a0014;
+  position: relative;
 }
-.hero{
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  padding:28px 20px 40px;
-  gap:18px;
+
+/* dark overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
-.avatar{
-  width:96px;height:96px;border-radius:50%;background:rgba(255,255,255,0.1);padding:6px;box-shadow:0 10px 30px rgba(0,0,0,0.12);
-  object-fit:cover;
+
+.content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  top: 18%;
 }
-.brand{ text-align:center; margin-top:4px }
-.brand h1{ font-size:36px;margin:8px 0 6px;font-weight:800; }
-.tag{opacity:0.95;font-size:14px;margin:0;color:var(--muted)}
-.cta-row{display:flex;gap:12px;width:100%;max-width:420px;justify-content:center;margin-top:8px}
-.btn{padding:12px 16px;border-radius:12px;text-decoration:none;display:inline-block;font-weight:700;font-size:15px;border: none;cursor:pointer}
-.btn.primary{background:#fff;color:#ff2d74;min-width:160px;text-align:center;box-shadow:0 8px 20px rgba(0,0,0,0.12)}
-.btn.ghost{background: rgba(255,255,255,0.12);color:#fff;min-width:120px;text-align:center}
-.features{margin-top:18px;width:100%;max-width:420px;display:flex;flex-direction:column;gap:12px}
-.feature{background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));padding:16px 14px;border-radius:12px;font-weight:700;font-size:15px;box-shadow: 0 6px 18px rgba(0,0,0,0.08)}
-.chat-bubble{margin-top:auto;background:#fff;color:#ff386b;padding:12px 16px;border-radius:18px;font-weight:700;box-shadow:0 8px 30px rgba(0,0,0,0.12);transform: translateY(10px)}
-.footer{width:100%;max-width:420px;text-align:center;font-size:12px;color:rgba(255,255,255,0.85);margin-top:10px;padding-bottom:6px}
-@media(min-width:900px){
-  .hero{ padding:48px; align-items:flex-start; }
-  .brand h1{ font-size:40px; }
-  .cta-row{ justify-content:flex-start; }
+
+/* ★ FIXED LOGO SETTINGS ★ */
+.logo {
+  width: 200px !important;
+  height: auto !important;
+  display: block !important;
+  margin: 0 auto 20px auto !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: relative !important;
+  z-index: 9999 !important;
 }
+
+/* title */
+h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+/* subtitle */
+.tag {
+  font-size: 22px;
+  opacity: 0.85;
+  margin-bottom: 35px;
+}
+
+/* Download button */
+.btn {
+  background: #ff2d74;
+  padding: 16px 32px;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 22px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* simple fade animation */
+@keyframes fade {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.content { animation: fade 1s ease forwards; }
